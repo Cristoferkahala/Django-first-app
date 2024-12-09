@@ -1,0 +1,74 @@
+div span a{
+    text-decoration: none;
+}
+
+/* Estilo geral para o contêiner da lista de carros */
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 colunas ajustáveis */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px;
+    justify-content: center; /* Centralizar itens se houver espaço */
+}
+
+/* Estilo geral para o contêiner do carro */
+.car-container {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a imagem do carro */
+.car-image img {
+    height: 120px;
+    width: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Botão de preço */
+.car-price {
+    background-color: #24a8c6;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.car-price:hover {
+    background-color: #1e8ca1;
+}
+
+/* Detalhes do carro */
+.car-details {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.car-describer {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.car-describer:hover {
+    color: #24a8c6;
+}
+
+.car-date {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}

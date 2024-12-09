@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: aliceblue;
+}
+
+header div .conteiner-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+header div ul li {
+    list-style: none;
+    display: inline;
+    float: left;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul li a{
+    
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #111;
+  }
+
+.sub-menu-viaturas{
+    display: none;
+}
+
+.sub-menu-Carrinho{
+    display: none;
+}
+
+
+/* Rodapé geral */
+.footer {
+    background-color: #242424; /* Cor de fundo escura */
+    color: #f9f9f9; /* Texto claro */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Links do rodapé */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #24a8c6; /* Cor de destaque ao passar o mouse */
+}
+
+/* Ícones sociais */
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2); /* Animação de ampliação ao passar o mouse */
+}

@@ -3,15 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+    
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+    {% block extra_css %}
+
+    {% endblock %}
+
+    <title>
+        {% block titulo %}
+            Site rent-a-car
+        {% endblock titulo %}
+    </title>
+
 </head>
 <body>
 
-    { % block 'header.html' %}
+    <header>
+        <div class="conteiner-menu">
+
+            <ul class="menu-site" id="menu">
+                <li><a href="home/">Home</a></li>
+                <li>
+                    <a href="viaturas" class="menu-viatura" onmouseenter="open_menu()">Viaturas</a>
+                    <ul>
+                        <li class="sub-menu-viaturas"><a href="">Novidades</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Carrinho</a>
+                    <ul>
+                        <li class="sub-menu-Carrinho"><a href="">Checkout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    {% block conteudo %}
+
+        <h1>Conteudo aqui</h1>
+
+    {% endblock conteudo %}
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos de Serviço</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+
+            <div class="footer-social">
+                <a href="#"><img src="{% static 'fontawesome-free-6.7.1-desktop\svgs\brands\facebook.svg' %}" alt="Facebook"></a>
+                <a href="#"><img src="{% static 'fontawesome-free-6.7.1-desktop\svgs\brands\twitter.svg' %}" alt="Twitter"></a>
+                <a href="#"><img src="{% static 'fontawesome-free-6.7.1-desktop\svgs\brands\instagram.svg' %}" alt="Instagram"></a>
+            </div>
+            <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+        </div>
+    </footer>
     
-    { % endblock  %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

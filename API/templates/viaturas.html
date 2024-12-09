@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+        {% block titulo %}
+            Viaturas
+        {% endblock titulo %}
+
+        {% load static %}
+
+        {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/viaturas.css' %}">
+        {% endblock extra_css %}
+
+{% block conteudo %}
+
+<div class="car-list">
+    {% for car in novo_carro %}
+    <div class="car-container">
+        {% if car.p_foto %}
+        <div class="car-image">
+            <img src="{{ car.p_foto.url }}" alt="Prado xls">
+
+        </div>
+        {% endif %}
+
+        <button class="car-price">
+            {{ car.preco }} kz
+        </button>
+
+        <div class="car-details">
+            <a class="car-describer" href="#">{{ car.descricao }}</a>
+            <p class="car-date">{{ car.data_publicacao }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock conteudo %}
