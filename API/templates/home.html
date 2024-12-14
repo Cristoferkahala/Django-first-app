@@ -4,8 +4,25 @@
             Home
         {% endblock titulo %}
 
+        {% load static %}
+        {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        {% endblock extra_css %}
+
     {% block conteudo %}
 
-    <h1>Conteudo da Home</h1>
+    <body>
+        <div class="banner">
+            <img src="{% static 'imagens/banner9.jpg' %}" alt="Banner de Aluguel de Carros" class="banner-image">
+            <div class="banner-content">
+                <h1>Alugue o Carro dos Seus Sonhos!</h1>
+                <p>Veículos de luxo, econômicos e com preços acessíveis. Reserve já!</p>
+                <div>
+                    <a href="{% static 'fontawesome-free-6.7.1-desktop\svgs\solid\ship.svg' %}"></a>
+                    <a href="viaturas/" class="banner-button">Ver Ofertas</a>
+                </div>
+                
+            </div>
+        </div>
 
     {% endblock conteudo %}

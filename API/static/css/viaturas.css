@@ -3,21 +3,23 @@ div span a{
 }
 
 /* Estilo geral para o contêiner da lista de carros */
+
 .car-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 colunas ajustáveis */
-    gap: 20px; /* Espaçamento entre os itens */
-    padding: 20px;
+    gap: 24px; /* Espaçamento entre os itens */
+    padding: 24px;
     justify-content: center; /* Centralizar itens se houver espaço */
 }
 
 /* Estilo geral para o contêiner do carro */
+
 .car-container {
     background-color: #f9f9f9;
     padding: 16px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(89, 88, 88, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -31,12 +33,12 @@ div span a{
     height: 120px;
     width: auto;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 /* Botão de preço */
 .car-price {
-    background-color: #24a8c6;
+    background-color: #ac241a;
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -46,8 +48,34 @@ div span a{
     transition: background-color 0.3s ease;
 }
 
+.Increment_degree_itens{
+
+    padding: 1.5vh;
+    margin: 2px;
+    color: #ddd;
+    background-color:  #1c232f !important;
+}
+
 .car-price:hover {
-    background-color: #1e8ca1;
+    background: #0f264e !important;
+}
+
+.div-conteiner-preco{
+    display: flex;
+    gap: 16px;
+}
+
+.iterantes{
+    display: flex;
+    color: #0f264e !important;
+    width: 2vw;
+    padding: 4px;
+    font-family: ROBOTO;
+    font-size: 16px;
+    border: solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* Detalhes do carro */

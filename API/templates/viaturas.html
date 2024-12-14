@@ -5,7 +5,6 @@
         {% endblock titulo %}
 
         {% load static %}
-
         {% block extra_css %}
         <link rel="stylesheet" href="{% static 'css/viaturas.css' %}">
         {% endblock extra_css %}
@@ -22,9 +21,14 @@
         </div>
         {% endif %}
 
-        <button class="car-price">
-            {{ car.preco }} kz
-        </button>
+        <div class="div-conteiner-preco">
+            <button class="car-price" data-preco="{{ car.preco }}" onmouseenter="show()" onmouseout="hide()">
+                {{ car.preco }} kz
+            </button>
+            <div class="iterantes">
+                <span class="plus">+</span><span class="sub">-</span>
+            </div>
+        </div>
 
         <div class="car-details">
             <a class="car-describer" href="#">{{ car.descricao }}</a>
@@ -35,3 +39,7 @@
 </div>
 
 {% endblock conteudo %}
+
+{% block file_javascript %}
+<script defer src=" {% static 'js/viaturas.js' %} "></script>
+{% endblock file_javascript %}

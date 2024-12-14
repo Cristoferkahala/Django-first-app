@@ -18,6 +18,11 @@ def viaturas(request):
 
     return render(request, 'viaturas.html', new_carro)
 
+def carrinho(request):
+    """Página que lista todos os itens da compra ou aluguel e o total, factura resumidamente"""
+    return render(request, 'carrinho.html')
+    pass
+
 def checkout(request):
     """Para fazer o pagamento"""
     pass
